@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title></title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Nombre"/>
+            <h:inputText value="#{indexBean.contacto.nombre}"/>
+
+            <h:outputLabel value="Apellido"/>
+            <h:inputText value="#{indexBean.contacto.apellido}"/>
+
+            <h:outputLabel value="Teléfono"/>
+            <h:inputText value="#{indexBean.contacto.telefono}"/>
+
+            <h:outputText value="Email"/>
+            <h:inputText value="#{indexBean.contacto.email}"/>
+        </h:panelGrid>
+
+        <h:commandButton value="Guardar" 
+                         actionListener="#{indexBean.guardar}"/>
+    </h:form>
+</h:body>
+</html>
