@@ -8,8 +8,8 @@
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/agenda" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.user" value="root"/>
-            <property name="javax.persistence.jdbc.password" value="password"/>
+            <property name="javax.persistence.jdbc.user" value="agendauser"/>
+            <property name="javax.persistence.jdbc.password" value="cocacola"/>
         </properties>
     </persistence-unit>
 </persistence>

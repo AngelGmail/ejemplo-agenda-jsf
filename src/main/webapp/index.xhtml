@@ -5,26 +5,48 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
-    <title></title>
+<style>
+.errorText {
+    color: red;
+}
+</style>
+    <title>Agenda</title>
 </h:head>
 <h:body>
     <h:form>
-        <h:panelGrid columns="2">
+        <h:messages id="msgs" />
+        <h:panelGrid columns="3">
             <h:outputLabel value="Nombre"/>
-            <h:inputText value="#{indexBean.contacto.nombre}"/>
+            <h:inputText id="nombre"
+                    value="#{indexBean.contacto.nombre}"
+                    required="true"
+                    requiredMessage="Nombre es un campo requerido."/>
+            <h:message for="nombre" styleClass="errorText"/>
 
             <h:outputLabel value="Apellido"/>
-            <h:inputText value="#{indexBean.contacto.apellido}"/>
+            <h:inputText id="apellido"
+                    value="#{indexBean.contacto.apellido}"
+                    required="true"
+                    requiredMessage="Apellido es un campo requerido"/>
+            <h:message for="apellido" styleClass="errorText" />
 
             <h:outputLabel value="Teléfono"/>
-            <h:inputText value="#{indexBean.contacto.telefono}"/>
+            <h:inputText id="telefono"
+                    value="#{indexBean.contacto.telefono}"
+                    required="true"
+                    requiredMessage="Teléfono es un campo requerido."/>
+            <h:message for="telefono" styleClass="errorText"/>
 
-            <h:outputText value="Email"/>
-            <h:inputText value="#{indexBean.contacto.email}"/>
+            <h:outputText value="Email" />
+            <h:inputText id="email"
+                    value="#{indexBean.contacto.email}"
+                    required="true"
+                    requiredMessage="Email es un campo requerido."/>
+            <h:message for="email" styleClass="errorText"/>
         </h:panelGrid>
 
         <h:commandButton value="Guardar" 
-                         actionListener="#{indexBean.guardar}"/>
+                         actionListener="#{indexBean.guardar}" update="msgs"/>
     </h:form>
 </h:body>
 </html>
